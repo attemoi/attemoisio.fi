@@ -1,14 +1,16 @@
 :root {
-  --background-color: #ffffff;
-  --text-color: #000000;
-  --hr-color: #e6e6e6;
+  --background-color: white;
+  --hr-color: #f3d8b4;
+  --text-color: #2a2a2c;
+  --hover-color: #46d389;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background-color: #000000;
-    --hr-color: #454545;
-    --text-color: #ffffff;
+    --background-color: #2a2a2c;
+    --hr-color: #555;
+    --text-color: white;
+    --hover-color: #46d389;
   }
 }
 
@@ -23,11 +25,16 @@ body {
 }
 
 a {
-  color: #1eaedb;
+  color: var(--text-color);
+}
+
+a:hover {
+  color: var(--hover-color);
+  transition: color 0.2s ease;
 }
 
 p {
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
 }
 
 h1 {
@@ -49,22 +56,44 @@ hr {
 }
 
 .row {
-  display: flex; /* Use flexbox for layout */
+  display: flex;
   justify-content: center;
   column-gap: 2rem;
-  padding: 1.5rem 0;
+  margin-bottom: 1.5rem;
   & > * {
     height: 100%;
   }
 }
 
 svg {
-  height: 2.5rem;
-  width: 2.5rem;
+  height: 2rem;
+  width: 2rem;
   fill: var(--text-color);
 }
 
 svg:hover {
-  fill: #e4572e;
+  fill: var(--hover-color);
   transition: fill 0.2s ease;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  vertical-align: bottom;
+  column-gap: 2rem;
+  margin: 3rem 0 2rem 0;
+}
+
+header h1 {
+  display: block;
+  margin: 0;
+  text-align: left;
+}
+
+header img {
+  display: block;
+  width: 8rem;
+  height: 8rem;
+  border-radius: 15%;
 }
