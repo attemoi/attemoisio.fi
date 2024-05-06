@@ -1,0 +1,70 @@
+:root {
+  --background-color: #ffffff;
+  --text-color: #000000;
+  --hr-color: #e6e6e6;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background-color: #000000;
+    --hr-color: #454545;
+    --text-color: #ffffff;
+  }
+}
+
+body {
+  background-color: var(--background-color);
+  font-family: Georgia, Arial, Helvetica, sans-serif;
+  font-size: 1.15rem;
+  line-height: 1.5;
+  text-align: center;
+  color: var(--text-color);
+  margin: 0 5%;
+}
+
+a {
+  color: #1eaedb;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+h1 {
+  font-size: 2.2rem;
+  margin: 2.5rem 0 1.5rem 0;
+  letter-spacing: 0.1625em;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin: 1rem 0;
+}
+
+hr {
+  margin: 0 0;
+  border-width: 0;
+  border-top: 1px solid var(--hr-color);
+}
+
+.row {
+  display: flex; /* Use flexbox for layout */
+  justify-content: center;
+  column-gap: 2rem;
+  padding: 1.5rem 0;
+  & > * {
+    height: 100%;
+  }
+}
+
+svg {
+  height: 2.5rem;
+  width: 2.5rem;
+  fill: var(--text-color);
+}
+
+svg:hover {
+  fill: #e4572e;
+  transition: fill 0.2s ease;
+}
